@@ -1,0 +1,44 @@
+.btn {
+  @include btn;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+
+  &--bookADemo {
+    padding: 1.6rem 2.4rem;
+    font-size: $font-size-root;
+    border-radius: 4px;
+    background-color: $color-primary-blue;
+    color: $color-primary-white;
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+
+    @include respond(phone) {
+      padding: 1.4rem 1.6rem;
+      background-color: $color-primary-white;
+    }
+  }
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  @include respond(phone) {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+}

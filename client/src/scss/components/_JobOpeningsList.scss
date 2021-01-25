@@ -1,0 +1,88 @@
+.JobOpeningsList {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding: 2rem 0px;
+    align-items: center;
+    border-bottom: 1px solid #E5E5E5;
+    
+    &-idContent{
+        display: flex;
+        // align-items: center;
+    }
+
+    &-id{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    &-Content {
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-Title {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+    }
+
+    &-Location {
+        margin-top: 1.5rem;
+        font-size: 2.2rem;
+    }
+    &-Button {
+        background-color: white;
+        font-size: 2.5rem;
+        color: #009ae0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.small-font {
+    font-size: 2rem;
+}
+
+.marginLeftStyle{
+    margin-left: 3rem;
+}
+
+@media(max-width:700px){
+    .small-font {
+        font-size: 1.8rem;
+    }
+    .marginLeftStyle{
+        margin-left: 1.5rem;
+    }
+    .JobOpeningsList{
+        width: 86%;
+        padding: 1.8rem 0px;
+
+        &-id{
+            font-size: 1.8rem;
+        }
+        &-Title{
+            font-size: 2rem;
+            word-break: break-word;
+        }
+        &-Content {
+            margin-left: 2rem;
+        }
+        &-Location{
+            margin-top: 1rem;
+            font-size: 1.9rem;
+        }
+        &-Button {
+            font-size: 2rem;
+            padding-left: 8px;
+        }
+    }
+}

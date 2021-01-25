@@ -1,0 +1,33 @@
+$color-primary-black: #121212;
+$color-primary-white: #ffffff;
+$color-primary-grey: #d8d8d8;
+$color-secondary-grey: #f4f7f8;
+$color-tertiary-grey: #777777;
+$color-primary-blue: #009ae0;
+$color-primary-green: #008489;
+
+$color-background-secondary: #0e3a62;
+
+$font-size-heading-mega: 4.2rem;
+$font-size-heading: 4rem;
+$font-size-heading-small: 3.2rem;
+$font-size-medium: 2.4rem;
+$font-size-small: 1.8rem;
+$font-size-root: 1.6rem;
+$font-size-small-extra: 1.4rem;
+
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$padding--container: 9rem 12rem;
+
+$margin-48: 4.8rem;
+$margin-24: 2.4rem;
+
+$box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12);
+
+@include respond(phone) {
+  $padding--container: 6rem 2.4rem;
+}

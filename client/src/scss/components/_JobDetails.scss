@@ -1,0 +1,76 @@
+.JobDetails {
+  //   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f7f8;
+  padding: 40px 24rem;
+
+  &--title {
+    display: flex;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+  }
+
+  &--location {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+  }
+
+  &--aboutRoleHead {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &--aboutRoleContent {
+    margin-top: 2rem;
+    margin-left: 8rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .JobDetails {
+    padding: 3rem 3rem;
+
+    &--title {
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+      margin-top: 0rem;
+    }
+    &--location {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      margin-top: 1.8rem;
+    }
+    &--aboutRoleHead {
+      margin-top: 2rem;
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
+    &--aboutRoleContent {
+      margin-left: 3rem;
+      font-size: 1.8rem;
+      margin-top: 1.8rem;
+    }
+  }
+}
+
+.backBtn {
+  width: 100%;
+  margin-top: 70px;
+  background-color: #f4f7f8;
+  padding: 5.7rem 14.5rem 0;
+}

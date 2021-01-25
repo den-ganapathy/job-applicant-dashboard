@@ -8,6 +8,7 @@ const jobDetailsSchema = new Schema({
   level: { type: String, required: true },
   expiry_date: { type: Date, required: true },
   posted_date: { type: Date, default: Date.now() },
+  description: { type: String, required: true },
 });
 const JobDetails = mongoose.model("job_detail", jobDetailsSchema);
 

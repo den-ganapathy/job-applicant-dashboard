@@ -1,0 +1,190 @@
+.jobListing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.8rem 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    &--app {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 600;
+      font-size: 3.2rem;
+      line-height: 1.35;
+      margin-left: 2.4rem;
+
+      @include respond(phone) {
+        font-size: 2.6rem;
+        margin-left: 1rem;
+      }
+    }
+
+    &--btn {
+      background: #009ae0;
+      color: #ffffff;
+      font-size: 1.6rem;
+      padding: 0 1.5rem;
+      border-radius: 4px;
+      margin-right: 2.4rem;
+
+      &__para {
+        margin-left: 0.5rem;
+      }
+      @include respond(phone) {
+        margin-right: 1rem;
+      }
+    }
+
+    &--btn:hover {
+      cursor: pointer;
+      box-shadow: 0em 0.3em 0.6em #e8e8e8, 0em 0.3em 0.6em #e8e8e8;
+      transition: box-shadow 0.8s ease-in-out;
+    }
+
+    @include respond(phone) {
+      padding: 1rem 0 1.2rem;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 2rem;
+    padding: 1.8rem 2.4rem 5rem;
+    min-height: 60vh;
+    margin: 0;
+
+    &--list {
+      border: 1px solid #e5e5e5;
+
+      &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.6rem;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid #e5e5e5;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+
+      &__title img {
+        width: 1rem;
+      }
+
+      &__description {
+        word-break: break-all;
+        padding: 1.6rem;
+        text-overflow: ellipsis;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 500;
+        font-size: 1.6rem;
+      }
+    }
+    &--list:hover {
+      box-shadow: 0em 0.3em 0.6em #e5e5e5, 0em 0.3em 0.6em #e5e5e5;
+      transition: box-shadow 0.5s ease-in-out;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__modal {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &--container {
+      background-color: #ffffff;
+      margin: auto;
+      border: 1px solid #888;
+      width: 40%;
+      border-radius: 1%;
+
+      &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.6rem 2rem;
+        font-size: 1.8rem;
+        color: rgba(0, 0, 0, 0.87);
+        border-bottom: 1px solid #eee;
+
+        &--close:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__body {
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        border-bottom: 1px solid #eee;
+
+        &--titleP,
+        &--locP,
+        &--desP {
+          width: 90%;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        &--titleI,
+        &--locI,
+        &--desI {
+          width: 90%;
+          border: none;
+          padding: 1rem 1.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #e5e5e5;
+        }
+
+        &--desI {
+          height: 10rem;
+        }
+
+        &--titleI:focus,
+        &--locI:focus,
+        &--desI:focus {
+          outline: none;
+        }
+      }
+
+      &__foot {
+        width: 100%;
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        &--btn {
+          background: #009ae0;
+          color: #ffffff;
+          padding: 1rem 2rem;
+          border-radius: 4px;
+          margin-right: 2rem;
+        }
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}

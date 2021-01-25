@@ -5,19 +5,28 @@ const ApplicantDetails = require("../models/applicantDetails");
 
 //retrieving job list
 router.get("/jobList", async (req, res) => {
+  console.log("api hit");
   const doc = await JobDetails.find();
   res.send(doc);
 });
 
 //posting job details
 router.post("/jobDetails", async (req, res) => {
-  const { title, location, emp_type, level, expiry_date } = req.body;
+  const {
+    title,
+    location,
+    emp_type,
+    level,
+    expiry_date,
+    description,
+  } = req.body;
   const job = new JobDetails({
     title: title,
     location: location,
     emp_type: emp_type,
     level: level,
     expiry_date: expiry_date,
+    description: description,
   });
   job.save().then(() => {
     res.send(job);
